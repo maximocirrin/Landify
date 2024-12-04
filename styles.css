@@ -237,9 +237,7 @@ header nav ul li a.active::after {
     margin: 0 auto;
     background-image: linear-gradient(to right, #26282d, #1e2326, #232c2e, #2a3535);    color: #0056b3;
     box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.5);
-    padding: 25px 0px;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding: 25px 15px;
     border-radius: 12px;
     text-align: center;
     align-items: center;
