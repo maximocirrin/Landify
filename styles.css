@@ -235,7 +235,7 @@ header nav ul li a.active::after {
     width: 80%;
     background-image: linear-gradient(to right, #26282d, #1e2326, #232c2e, #2a3535);    color: #0056b3;
     box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.5);
-    padding: 1vw 1vw;
+    padding: 1vw 2vw;
     border-radius: 12px;
     display: flex;
     align-items: center;
@@ -255,7 +255,7 @@ header nav ul li a.active::after {
 
 .contact form input,
 .contact form textarea {
-    width: 100%;
+    width: 80%;
     
     margin-bottom: 20px;
     border: 1px solid #34495e;
