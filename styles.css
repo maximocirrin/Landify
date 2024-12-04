@@ -237,7 +237,7 @@ header nav ul li a.active::after {
     width: 80%;
     background-image: linear-gradient(to right, #26282d, #1e2326, #232c2e, #2a3535);    color: #0056b3;
     box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.5);
-    padding: 25px 30px;
+    padding: 1vw 1vw;
     border-radius: 12px;
     display: flex;
     align-items: center;
@@ -336,46 +336,9 @@ header nav ul li a.active::after {
 /* Responsividad */
 @media (max-width: 768px) {
     .contact h2 {
-        font-size: 2rem;
-    }
-
-    .contact form {
-        padding: 20px;
-    }
-}
-
-/* Animaciones */
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Estilo para la línea decorativa */
-.contact .decorative-line {
-    width: 70px;
-    height: 4px;
-    background: #3498db;
-    margin: 10px auto 30px;
-    border-radius: 50px;
-}
-
-/* Responsividad */
-@media (max-width: 768px) {
-    .contact h2 {
         font-size: 2.2rem;
     }
-
-    .contact form {
-        padding: 20px;
-    }
 }
-
 
 /* Footer */
 footer {
