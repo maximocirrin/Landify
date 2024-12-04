@@ -3,7 +3,6 @@ body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    
     background: linear-gradient(120deg, #0056b3, #007bff);
     color: #333;
     scroll-behavior: smooth; /* Habilita el scroll suave */
@@ -21,7 +20,7 @@ header {
     top: 0.5vh;
     z-index: 1000;
     width: 99%;
-    color: #0056b3;
+    color: #ff5100;
     margin: 0 auto;
     height: 15%;
     border-radius: 10px;
@@ -49,7 +48,18 @@ header nav ul li a {
     transition: color 0.3s ease;
 }
 header nav ul li a.active {
-    color: #0056b3;
+    color: #ff5100;
+}
+
+header nav ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: -0.5px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: #ff5100;
+    transition: width 0.3s ease, left 0.3s ease;
 }
 
 header nav ul li a::after {
@@ -70,14 +80,17 @@ header nav ul li a.active::after {
 /* SECCIÓN INICIO */
 .hero {
     text-align: center;
-    padding: 100px 20px;
-    color: white;
+    padding: 5vh 10vh 20px;
+    color: #28373a;
     overflow: hidden;
     position: relative;
+    height: 40vh;
 }
 
+  
+
 .hero h1 {
-    font-size: 2rem;
+    font-size: 1.5rem;
     margin-bottom: 20px;
     animation: fadeIn 1s ease-in-out;
 }
@@ -90,7 +103,7 @@ header nav ul li a.active::after {
 
 .hero .btn-cta {
     padding: 12px 25px;
-    background: #00e3ff;
+    background: #ff5100;
     color: #3c4142;
     font-weight: 600;
     border-radius: 50px;
@@ -206,8 +219,8 @@ header nav ul li a.active::after {
 }
 
 .pricing .plan.featured {
-    background: #007bff;
-    color: white;
+    background-image: linear-gradient(to right, #111214, #181b1d, #1e2326, #232c2e, #2a3535);
+    color: #dec4b8;
 }
 
 /* SECCIÓN CONTACTO */
