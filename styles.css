@@ -334,9 +334,14 @@ header nav ul li a.active::after {
         font-size: 2rem;
     }
 
-    .contact form {
-        padding: 20px;
+}
+
+@media (min-width: 1500px) {
+    header nav ul li a {
+        font-weight: 600;
+        font-size: 1.5rem;
     }
+
 }
 
 /* Animaciones */
