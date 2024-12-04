@@ -256,8 +256,7 @@ header nav ul li a.active::after {
 
 .contact form input,
 .contact form textarea {
-    width: 80%;
-    
+    width: 80%; 
     margin-bottom: 20px;
     border: 1px solid #34495e;
     border-radius: 8px;
@@ -272,9 +271,7 @@ header nav ul li a.active::after {
 #email {
     max-width: 300px;
 }
-#mensaje {
-    width: 99%;
-}
+
 
 
 .contact form input:focus,
@@ -334,12 +331,7 @@ header nav ul li a.active::after {
 }
 
 /* Responsividad */
-@media (max-width: 768px) {
-    .contact h2 {
-        font-size: 2rem;
-    }
 
-}
 
 @media (min-width: 1500px) {
     header nav ul li a {
@@ -370,12 +362,7 @@ header nav ul li a.active::after {
     border-radius: 50px;
 }
 
-/* Responsividad */
-@media (max-width: 768px) {
-    .contact h2 {
-        font-size: 2.2rem;
-    }
-}
+
 
 /* Footer */
 footer {
