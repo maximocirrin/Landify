@@ -92,7 +92,7 @@ header nav ul li a.active::after {
 .hero .btn-cta {
     padding: 12px 25px;
     background: #00e3ff;
-    color: #3f4aa2;
+    color: #3c4142;
     font-weight: 600;
     border-radius: 50px;
     text-decoration: none;
@@ -246,7 +246,7 @@ header nav ul li a.active::after {
 
 .contact form label {
     font-size: 0.9rem;
-    color: #7a8897;
+    color: white;
     display: block;
     margin-bottom: 5px;
     font-weight: 600;
