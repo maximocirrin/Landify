@@ -1,0 +1,424 @@
+/* Estilos generales */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #0056b3;
+    color: #333;
+    scroll-behavior: smooth; /* Habilita el scroll suave */
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* HEADER */
+header {
+    background-image: linear-gradient(to right, #111214, #181b1d, #1e2326, #232c2e, #2a3535);    color: #0056b3;
+    position: sticky; /* Fija la barra de navegación */
+    top: 0.5vh;
+    z-index: 1000;
+    width: 99%;
+    margin: 0 auto;
+    height: 15%;
+    border-radius: 10px;
+    background-color: #3498db;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
+}
+
+header nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 1vw;
+}
+
+header nav ul li {
+    margin: 0 2%;
+    position: relative; /* Necesario para efecto */
+}
+
+header nav ul li a {
+    font-weight: 600;
+    font-size: 0.8rem;
+    color: white;
+    position: relative;
+    transition: color 0.3s ease;
+}
+header nav ul li a.active {
+    color: #0056b3;
+}
+
+header nav ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: -0.5px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: #0056b3;
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+header nav ul li a.active::after {
+    width: 100%;
+}
+
+
+/* SECCIÓN INICIO */
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(120deg, #0056b3, #007bff);
+    color: white;
+    overflow: hidden;
+    position: relative;
+}
+
+.hero h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.hero p {
+    font-size: 1rem;
+    margin-bottom: 30px;
+    animation: fadeIn 1.2s ease-in-out;
+}
+
+.hero .btn-cta {
+    padding: 12px 25px;
+    background: #00e3ff;
+    color: #3f4aa2;
+    font-weight: 600;
+    border-radius: 50px;
+    text-decoration: none;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero .btn-cta:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* SECCIÓN SOBRE NOSOTROS */
+.about {
+    text-align: center;
+    padding: 50px 20px;
+    background: #f9f9f9;
+    overflow: hidden;
+    position: relative;
+    
+}
+
+.about h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    animation: slideInFromLeft 1s ease-in-out;
+}
+
+.about .features {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Hace la sección responsive */
+    margin-top: 30px;
+}
+
+.about .feature-item {
+    margin: 10px 20px;
+    width: 200px;
+    text-align: center;
+    animation: fadeInUp 1.2s ease-in-out;
+}
+
+.feature-item {
+    border-radius: 10px;
+    box-shadow: 1px 1px 40px 1px rgba(48,57,149,0.5);
+-webkit-box-shadow: 1px 1px 40px 1px rgba(48,57,149,0.5);
+-moz-box-shadow: 1px 1px 40px 1px rgba(48,57,149,0.5);
+}
+
+.about .feature-item .icon {
+    font-size: 3rem;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.about .feature-item h3 {
+    font-size: 1.5rem;
+    margin-top: 10px;
+}
+
+/* Estilo del separador */
+.separador {
+    position: absolute; /* Posiciona el separador dentro de la caja */
+    bottom: 0; /* Lo coloca al fondo en el eje Y */
+    left: 50%; /* Alinea horizontalmente */
+    transform: translateX(-50%); /* Centra en el eje X */
+    width: 90%; /* Ancho del separador */
+    height: 12px; /* Grosor del separador */
+    background: linear-gradient(90deg, #004aad, #0065d2, #004aad); /* Degradado atractivo */
+    border-radius: 25px; /* Bordes redondeados */
+    
+}
+
+
+
+
+/* SECCIÓN PRECIOS */
+.pricing {
+    text-align: center;
+    padding: 50px 20px;
+    background: #f9f9f9;
+}
+
+.pricing h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+}
+
+.pricing .pricing-plans {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Responsive */
+}
+
+.pricing .plan {
+    background: #f0f0f0;
+    margin: 15px;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.pricing .plan:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.pricing .plan.featured {
+    background: #007bff;
+    color: white;
+}
+
+/* SECCIÓN CONTACTO */
+.contact {
+    padding: 60px 20px;
+    /* Fondo suave con degradado */
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.5);
+    margin: 40px 15px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.contact h2 {
+    font-size: 2.5rem;
+    color:linear-gradient(to right, #111214, #181b1d, #1e2326, #232c2e, #2a3535);  /* Gris oscuro elegante */
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-shadow: 3px 1px 4px rgba(44,62,80,0.54);
+    position: relative;
+    animation: fadeInDown 1s ease-in-out;
+}
+
+.contact form {
+    width: 80%;
+    margin: 0 auto;
+    background-image: linear-gradient(to right, #26282d, #1e2326, #232c2e, #2a3535);    color: #0056b3;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.5);
+    padding: 25px 30px;
+    border-radius: 12px;
+    text-align: left;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.contact form label {
+    font-size: 0.9rem;
+    color: #7a8897;
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.contact form input,
+.contact form textarea {
+    width: 100%;
+    
+    margin-bottom: 20px;
+    border: 1px solid #34495e;
+    border-radius: 8px;
+    background: #bbb0d2;
+    font-size: 1rem;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+}
+#nombre {
+    max-width: 300px;
+}
+#email {
+    max-width: 300px;
+}
+
+
+.contact form input:focus,
+.contact form textarea:focus {
+    border-color: #3498db; /* Azul suave */
+    box-shadow: 0 0 10px rgba(52, 152, 219, 0.2);
+    outline: none;
+}
+
+.contact form textarea {
+    resize: none;
+    height: 120px; /* Tamaño cómodo para mensajes */
+}
+
+.contact form button {
+    display: inline-block;
+    width: 100%;
+    padding: 12px 20px;
+    background: #3498db;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    font-family: 'Poppins', sans-serif;
+}
+
+.contact form button:hover {
+    background: #2980b9; /* Azul más intenso */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Animaciones */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .contact h2 {
+        font-size: 2rem;
+    }
+
+    .contact form {
+        padding: 20px;
+    }
+}
+
+/* Animaciones */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Estilo para la línea decorativa */
+.contact .decorative-line {
+    width: 70px;
+    height: 4px;
+    background: #3498db;
+    margin: 10px auto 30px;
+    border-radius: 50px;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .contact h2 {
+        font-size: 2.2rem;
+    }
+
+    .contact form {
+        padding: 20px;
+    }
+}
+
+
+/* Footer */
+footer {
+    background: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* ANIMACIONES */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
