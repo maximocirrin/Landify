@@ -3,7 +3,8 @@ body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    background: #0056b3;
+    
+    background: linear-gradient(120deg, #0056b3, #007bff);
     color: #333;
     scroll-behavior: smooth; /* Habilita el scroll suave */
 }
@@ -23,7 +24,6 @@ header {
     margin: 0 auto;
     height: 15%;
     border-radius: 10px;
-    background-color: #3498db;
     box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
 }
 
@@ -71,7 +71,6 @@ header nav ul li a.active::after {
 .hero {
     text-align: center;
     padding: 100px 20px;
-    background: linear-gradient(120deg, #0056b3, #007bff);
     color: white;
     overflow: hidden;
     position: relative;
@@ -110,7 +109,6 @@ header nav ul li a.active::after {
     text-align: center;
     padding: 50px 20px;
     background: #f9f9f9;
-    overflow: hidden;
     position: relative;
     
 }
@@ -215,7 +213,9 @@ header nav ul li a.active::after {
 /* SECCIÓN CONTACTO */
 .contact {
     padding: 60px 20px;
-    /* Fondo suave con degradado */
+    display: flex;
+    align-items: center;
+    flex-direction: column;
     text-align: center;
     border-radius: 15px;
     box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.5);
@@ -235,11 +235,13 @@ header nav ul li a.active::after {
 
 .contact form {
     width: 80%;
-    margin: 0 auto;
     background-image: linear-gradient(to right, #26282d, #1e2326, #232c2e, #2a3535);    color: #0056b3;
     box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.5);
     padding: 25px 30px;
     border-radius: 12px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
     text-align: center;
     animation: fadeInUp 1s ease-in-out;
 }
@@ -269,6 +271,9 @@ header nav ul li a.active::after {
 }
 #email {
     max-width: 300px;
+}
+#mensaje {
+    width: 99%;
 }
 
 
@@ -300,7 +305,7 @@ header nav ul li a.active::after {
 }
 
 .contact form button:hover {
-    background: #2980b9; /* Azul más intenso */
+    background: #2980b9; 
     transform: translateY(-2px);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
