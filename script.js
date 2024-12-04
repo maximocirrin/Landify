@@ -48,7 +48,6 @@ document.querySelectorAll('section a').forEach(link => {
     });
 });
 
-
 // Detectar la sección activa y aplicar la clase activa
 const sections = document.querySelectorAll('section');
 const navLinks = document.querySelectorAll('header nav ul li a');
