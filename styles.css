@@ -43,7 +43,7 @@ header nav ul li {
 header nav ul li a {
     font-weight: 600;
     font-size: 0.8rem;
-    color: white;
+    color: #dec4b8;
     position: relative;
     transition: color 0.3s ease;
 }
@@ -80,7 +80,7 @@ header nav ul li a.active::after {
 /* SECCIÓN INICIO */
 .hero {
     text-align: center;
-    padding: 5vh 10vh 20px;
+    padding: 5vh 0vh 20px;
     color: #28373a;
     overflow: hidden;
     position: relative;
@@ -353,6 +353,8 @@ header nav ul li a.active::after {
     }
 
 }
+
+
 
 /* Animaciones */
 @keyframes fadeInUp {
