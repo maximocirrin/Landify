@@ -76,9 +76,9 @@ window.addEventListener('scroll', () => {
 // btn effect
 document.querySelector('.btn-pricing').addEventListener('click', function() {
     this.classList.add('btn-pricing-active');
-    console.log("Button clicked!");
+   
     setTimeout(() => {
-        console.log("Removing active class");
+        
         this.classList.remove('btn-pricing-active');
     }, 100);
 });
