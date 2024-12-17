@@ -103,7 +103,6 @@ header nav ul li a.active::after {
     justify-content: center;
     align-content: start;
     flex-wrap: wrap;
-    margin-bottom: 00px;
 
 }
 
@@ -115,12 +114,10 @@ header nav ul li a.active::after {
 img {
     max-width: 100%;
     height: auto;
-    border-radius: 8px;
 }
 
 @media (max-width: 1269px) {
     .image-container {
-        width: 80vw; /* Aumenta el tamaño de la imagen un 20% */
         margin-bottom: -50px;
     }
 }
