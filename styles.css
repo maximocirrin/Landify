@@ -106,6 +106,12 @@ header nav ul li a.active::after {
 
 }
 
+.heroText {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 .image-container {
     text-align: center;
     width: 50vw;
@@ -120,12 +126,11 @@ img {
 
 
 
-/* @media (max-width: 345px) {
+ @media (max-width: 500px) {
     .image-container {
-        transform: scale(1); 
-        margin-bottom: -50px;
+        transform: scale(1.5);
     }
-} */
+} 
 
   
 
