@@ -118,19 +118,19 @@ img {
     border-radius: 8px;
 }
 
-@media (max-width: 794px) {
+@media (max-width: 1269px) {
     .image-container {
-        transform: scale(1.2); /* Aumenta el tamaño de la imagen un 20% */
+        width: 80vw; /* Aumenta el tamaño de la imagen un 20% */
         margin-bottom: -50px;
     }
 }
 
-@media (max-width: 345px) {
+/* @media (max-width: 345px) {
     .image-container {
-        transform: scale(1.8); /* Aumenta el tamaño de la imagen un 20% */
+        transform: scale(1); 
         margin-bottom: -50px;
     }
-}
+} */
 
   
 
