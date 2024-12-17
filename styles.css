@@ -117,23 +117,19 @@ img {
     height: auto;
 }
 
-.image2-container { /* Fijo en la pantalla */
-    right: 0;         /* Pegado a la derecha */
-    top: 120%;        /* 120% abajo del borde superior */
-    z-index: -1;      /* Detrás de otros elementos */
-    pointer-events: none; /* Evita interferencias de clics */
+/* .image2-container { 
+    right: 0;         
+    top: 120%;       
+    z-index: -1;      
+    pointer-events: none; 
 }
 
 .image2-container img {
-    width: auto;       /* Ajusta según el diseño */
-    height: auto;      /* Mantén proporción */
-    max-width: 100%;   /* Evita desbordes horizontales */
-}
-/* @media (max-width: 1269px) {
-    .image-container {
-        margin-bottom: -50px;
-    }
+    width: auto;       
+    height: auto;      
+    max-width: 100%;   
 } */
+
 
 /* @media (max-width: 345px) {
     .image-container {
@@ -179,6 +175,10 @@ img {
     text-align: center;
     padding: 50px 20px;
     position: relative;
+    background: url(Img/s2.webp);
+    background-size: contain;  /* La imagen cubrirá toda el área sin cortarse */
+    background-position: center ;  /* Centra la imagen dentro del contenedor */
+    background-repeat: no-repeat; 
     
 }
 
@@ -196,6 +196,7 @@ img {
     margin-top: 30px;
     color: #faf4f4;
 }
+
 
 .about .feature-item {
     margin: 10px 20px;
@@ -220,18 +221,7 @@ img {
     margin-top: 10px;
 }
 
-/* Estilo del separador */
-.separador {
-    position: absolute; /* Posiciona el separador dentro de la caja */
-    bottom: 0; /* Lo coloca al fondo en el eje Y */
-    left: 50%; /* Alinea horizontalmente */
-    transform: translateX(-50%); /* Centra en el eje X */
-    width: 90%; /* Ancho del separador */
-    height: 12px; /* Grosor del separador */
-    background: linear-gradient(90deg, #ff5100, #f7621e, #ff5100); /* Degradado atractivo */
-    border-radius: 25px; /* Bordes redondeados */
-    
-}
+
 
 
 
