@@ -101,9 +101,9 @@ header nav ul li a.active::after {
     height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-content: start;
     flex-wrap: wrap;
-    margin-bottom: 100px;
+    margin-bottom: 00px;
 
 }
 
