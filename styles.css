@@ -98,7 +98,7 @@ header nav ul li a.active::after {
     padding: 5vh 0vh 20px;
     color: #faf4f4;
     position: relative;
-    height: 100vh;
+    height: auto;
     display: flex;
     justify-content: center;
     align-content: start;
@@ -117,18 +117,7 @@ img {
     height: auto;
 }
 
-/* .image2-container { 
-    right: 0;         
-    top: 120%;       
-    z-index: -1;      
-    pointer-events: none; 
-}
 
-.image2-container img {
-    width: auto;       
-    height: auto;      
-    max-width: 100%;   
-} */
 
 
 /* @media (max-width: 345px) {
