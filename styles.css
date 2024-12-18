@@ -242,6 +242,11 @@ img {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
+.feature-item:focus{
+    transform: scale(1.1, 1.1);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
 
 
 
@@ -282,17 +287,19 @@ img {
     
     box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    position: relative;
     overflow: hidden;
 }
 
 
-.pricing .plan:hover {
+.plan:hover {
     transform: scale(1.1, 1.1);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
-
+.plan:focus {
+    transform: scale(1.1, 1.1);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
   
   
 
