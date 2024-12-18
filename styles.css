@@ -247,6 +247,21 @@ img {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
+@media (max-width: 600px) {
+    .feature-item:active{
+        transform: scale(1.1, 1.1);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .btn-cta:active {
+        transform: scale(1.1);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    }
+    .plan:active {
+        transform: scale(1.1, 1.1);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+}
 
 
 
@@ -296,10 +311,7 @@ img {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
-.plan:focus {
-    transform: scale(1.1, 1.1);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-}
+
   
   
 
@@ -354,8 +366,6 @@ img {
 }
 
 
-
-/* JavaScript para alternar la clase active durante 2 segundos */
 /* SECCIÓN CONTACTO */
 .contact {
     padding: 60px 20px;
