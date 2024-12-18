@@ -233,18 +233,15 @@ img {
 }
 
 
-.features .feature-item {
+.feature-item {
     transition: 400ms;
 }
 
-.features .feature-item:hover {
+.feature-item:hover{
     transform: scale(1.1, 1.1);
-  }
-  
-  .features:hover > .feature-item:not(:hover) {
-    filter: blur(10px);
-    transform: scale(0.9, 0.9);
-  }
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
 
 
 
@@ -308,18 +305,7 @@ img {
 }
 
 
-.pricing-plans .desenfoque {
-    transition: 400ms;
-}
 
-.pricing-plans .desenfoque:hover {
-    transform: scale(1.1, 1.1);
-  }
-  
-  .pricing-plans:hover > .desenfoque:not(:hover) {
-    filter: blur(10px);
-    transform: scale(0.9, 0.9);
-  }
 
 /* btn effect */
 
