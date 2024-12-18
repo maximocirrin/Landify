@@ -272,6 +272,7 @@ img {
 .pricing-plans {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .pricing .plan {
