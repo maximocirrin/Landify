@@ -310,6 +310,23 @@ img {
 }
 
 
+.plan-text{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    padding: 0%;
+}
+.plan-text li{
+    margin-bottom: 5%;
+}
+
+.plan h3{
+    font-size: 2rem;
+}
+
+.plan p{
+    margin-bottom: 15%;
+}
 
 
 /* btn effect */
