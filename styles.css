@@ -95,9 +95,9 @@ header nav ul li a.active::after {
 /* SECCIÓN INICIO */
 .hero {
     text-align: center;
-    padding: 5vh 0vh 20px;
     color: #faf4f4;
     position: relative;
+    margin-top: -5%;
     height: auto;
     display: flex;
     justify-content: center;
@@ -106,11 +106,7 @@ header nav ul li a.active::after {
 
 }
 
-.heroText {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
+
 
 .image-container {
     text-align: center;
@@ -129,10 +125,17 @@ img {
  @media (max-width: 500px) {
     .image-container {
         transform: scale(1.5);
+        margin-top: 10%;
     }
 } 
 
-  
+
+
+.heroText {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 
 .hero h1 {
     font-size: 2.5em;
@@ -163,6 +166,20 @@ img {
     transform: scale(1.1);
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
 }
+
+@media (min-width: 2560px) {
+
+    .hero h1 {
+        transform: scale(2);
+    }
+    
+
+    .hero p{
+        transform: scale(2);
+    }
+  
+}
+
 
 /* SECCIÓN SOBRE NOSOTROS */
 .about {
@@ -197,12 +214,12 @@ img {
     width: 200px;
     text-align: center;
     animation: fadeInUp 1.2s ease-in-out;
-    background: rgb(7,7,9);
 }
 
 .feature-item {
     border-radius: 10px;
-    
+    padding: 2%;
+    background: rgb(7,7,9);
     box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
 }
 .about .feature-item .icon {
@@ -216,12 +233,28 @@ img {
 }
 
 
+.features .feature-item {
+    transition: 400ms;
+}
+
+.features .feature-item:hover {
+    transform: scale(1.1, 1.1);
+  }
+  
+  .features:hover > .feature-item:not(:hover) {
+    filter: blur(10px);
+    transform: scale(0.9, 0.9);
+  }
+
+
 
 
 
 
 /* SECCIÓN PRECIOS */
 .pricing {
+    display: flex;
+    flex-direction: column;
     text-align: center;
     padding: 50px 20px;
 }
@@ -234,10 +267,11 @@ img {
     color: #faf4f4;
 }
 
-.pricing .pricing-plans {
+
+
+.pricing-plans {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap; /* Responsive */
 }
 
 .pricing .plan {
@@ -256,9 +290,13 @@ img {
 
 
 .pricing .plan:hover {
-    transform: scale(1.05);
+    transform: scale(1.1, 1.1);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
+
+
+  
+  
 
 .pricing .plan.featured {
     background: rgb(7,7,9);
@@ -267,6 +305,20 @@ img {
     background: linear-gradient(90deg, rgba(7,7,9,1) 0%, rgba(52,32,1,1) 91%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#070709",endColorstr="#342001",GradientType=1);    color: #dec4b8;
 }
+
+
+.pricing-plans .desenfoque {
+    transition: 400ms;
+}
+
+.pricing-plans .desenfoque:hover {
+    transform: scale(1.1, 1.1);
+  }
+  
+  .pricing-plans:hover > .desenfoque:not(:hover) {
+    filter: blur(10px);
+    transform: scale(0.9, 0.9);
+  }
 
 /* btn effect */
 
@@ -331,77 +383,7 @@ img {
     position: relative;
     animation: fadeInDown 1s ease-in-out;
 }
-/* 
-.contact form {
-    width: 80%;
-    background: rgb(7,7,9);
-    background: -moz-linear-gradient(90deg, rgba(7,7,9,1) 0%, rgba(52,32,1,1) 91%);
-    background: -webkit-linear-gradient(90deg, rgba(7,7,9,1) 0%, rgba(52,32,1,1) 91%);
-    background: linear-gradient(90deg, rgba(7,7,9,1) 0%, rgba(52,32,1,1) 91%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#070709",endColorstr="#342001",GradientType=1);    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.5);
-    padding: 1vw 2vw;
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
-    animation: fadeInUp 1s ease-in-out;
-}
 
-.contact form label {
-    font-size: 0.9rem;
-    color: white;
-    display: block;
-    margin-bottom: 5px;
-    font-weight: 600;
-}
-
-.contact form input,
-.contact form textarea {
-    width: 80%; 
-    margin-bottom: 20px;
-    border: 1px solid #34495e;
-    border-radius: 8px;
-    background: #bbb0d2;
-    font-size: 1rem;
-    transition: border 0.3s ease, box-shadow 0.3s ease;
-    font-family: 'Poppins', sans-serif;
-}
-#nombre {
-    max-width: 300px;
-}
-#email {
-    max-width: 300px;
-}
-
-
-
-.contact form input:focus,
-.contact form textarea:focus {
-    border-color: #3498db; 
-    box-shadow: 0 0 10px rgba(52, 152, 219, 0.2);
-    outline: none;
-}
-
-.contact form textarea {
-    resize: none;
-    height: 120px; 
-}
-
-.contact form button {
-    display: inline-block;
-    width: 100%;
-    padding: 12px 20px;
-    margin-bottom: 5%;
-    font-size: 1rem;
-    font-weight: bold;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-family: 'Poppins', sans-serif;
-}
- */
 
 
 
