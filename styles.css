@@ -361,9 +361,9 @@ img {
 .btn-pricing-active{
     background-color: #ff5100;
     box-shadow: 0px 0px 40px rgba(255, 81, 0, 0.438);
-
     transition: background-color 0.3s, box-shadow 0.3s;
-}
+ } /*se agrega con js al hacer click */
+
 
 
 /* SECCIÓN CONTACTO */

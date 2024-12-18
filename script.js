@@ -9,13 +9,6 @@ window.addEventListener('scroll', () => {
     });
 });
 
-// Enviar formulario de contacto
-const form = document.getElementById('contact-form');
-form.addEventListener('submit', function(event) {
-    event.preventDefault();
-    alert('¡Gracias por tu mensaje! Nos pondremos en contacto pronto.');
-    form.reset();
-});
 
 // Smooth scroll for navigation links
 document.querySelectorAll('header nav ul li a').forEach(link => {
@@ -74,11 +67,14 @@ window.addEventListener('scroll', () => {
 
 
 // btn effect
-document.querySelector('.btn-pricing').addEventListener('click', function() {
-    this.classList.add('btn-pricing-active');
-   
-    setTimeout(() => {
-        
-        this.classList.remove('btn-pricing-active');
-    }, 100);
+document.querySelectorAll('.btn-pricing').forEach(function(button) {
+    button.addEventListener('click', function() {
+        this.classList.add('btn-pricing-active');
+
+        setTimeout(() => {
+            this.classList.remove('btn-pricing-active');
+        }, 1000);
+    });
 });
+
+
