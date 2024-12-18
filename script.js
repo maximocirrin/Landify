@@ -26,10 +26,11 @@ document.querySelectorAll('header nav ul li a').forEach(link => {
     });
 });
 
-document.querySelectorAll('section a').forEach(link => {
+document.querySelectorAll('.btn-hero').forEach(link => {
     link.addEventListener('click', (e) => {
         e.preventDefault();
-        const targetId = e.target.getAttribute('href').slice(1);
+        // Aquí obtenemos el 'href' desde el enlace <a> y no desde el botón.
+        const targetId = link.getAttribute('href').slice(1);
         const targetSection = document.getElementById(targetId);
 
         if (targetSection) {
