@@ -1,3 +1,4 @@
+
 // Animación de aparición de elementos al hacer scroll
 const elements = document.querySelectorAll('.feature-item, .plan');
 window.addEventListener('scroll', () => {
@@ -77,5 +78,63 @@ document.querySelectorAll('.btn-pricing').forEach(function(button) {
         }, 1000);
     });
 });
+
+
+
+// Modal pago
+
+// Crear el contenedor del modal
+const modalContainer = document.createElement('div');
+modalContainer.id = 'modalContainer';
+modalContainer.innerHTML = `
+  <div id="modalContent">
+    <span id="closeModal">&times;</span>
+    <h2>Confirmar Compra</h2>
+    <p id="planName">Plan Seleccionado</p>
+    <p id="planPrice">Precio: $</p>
+    <label>
+      <input type="checkbox" id="extraOption" class="custom-checkbox"> Cambios Mensuales (+$10)
+    </label>
+    <p id="totalPrice">Total: $</p>
+    <button id="payButton">Pagar</button>
+  </div>
+`;
+
+document.body.appendChild(modalContainer);
+
+function openModal(planName, planPrice) {
+  document.getElementById('planName').textContent = `Plan: ${planName}`;
+  document.getElementById('planPrice').textContent = `Precio: $${planPrice}`;
+  document.getElementById('totalPrice').textContent = `Total: $${planPrice}`;
+  document.getElementById('extraOption').checked = false;
+  modalContainer.style.display = 'flex';
+}
+
+function closeModal() {
+  modalContainer.style.display = 'none';
+}
+
+const actionButtons = document.querySelectorAll('.btn-pricing');
+
+actionButtons.forEach((button) => {
+  button.addEventListener('click', (e) => {
+    const planElement = e.target.closest('.plan');
+    const planName = planElement.querySelector('h3').textContent;
+    const planPrice = parseInt(planElement.querySelector('p').textContent.replace('$', '').replace('/mes', ''));
+    openModal(planName, planPrice);
+  });
+});
+
+document.getElementById('closeModal').addEventListener('click', closeModal);
+modalContainer.addEventListener('click', (e) => {
+  if (e.target === modalContainer) closeModal();
+});
+
+document.getElementById('extraOption').addEventListener('change', (e) => {
+  const basePrice = parseFloat(document.getElementById('planPrice').textContent.split('$')[1]);
+  const extraCharge = e.target.checked ? 10 : 0;
+  document.getElementById('totalPrice').textContent = `Total: $${basePrice + extraCharge}`;
+});
+
 
 

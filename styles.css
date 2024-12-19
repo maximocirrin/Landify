@@ -374,6 +374,140 @@ img {
     }
 }
 
+
+/* Estilos básicos para el modal de pago*/
+/* Archivo CSS - Estilo Minimalista con Efecto Blur */
+
+/* Contenedor del modal */
+#modalContainer {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    backdrop-filter: blur(8px); /* Efecto de desenfoque */
+  }
+  
+  /* Contenido del modal */
+  #modalContent {
+    background: #181818;
+    width: 80%;
+    max-width: 400px;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 0.3s ease-in-out;
+    position: relative;
+    text-align: center;
+  }
+  
+  /* Animación de entrada */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+  }
+  
+  /* Botón de cierre */
+  #closeModal {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #555;
+  }
+  
+  /* Contenido del modal */
+  #modalContent h2 {
+    margin: 0 0 1rem;
+    font-size: 1.8rem;
+    color: #989898;
+  }
+  
+  #modalContent p {
+    margin: 0.5rem 0;
+    font-size: 1rem;
+    color: #666;
+  }
+  
+  #modalContent label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+    color: #6c5b50;
+  }
+
+ /* Estilo del checkbox */
+.custom-checkbox {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #656464;
+    border-radius: 5px;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+  }
+  
+  .custom-checkbox:checked {
+    background: #ff5900;
+    box-shadow: 0px 0px 40px rgba(255, 81, 0, 0.438);
+  }
+  
+  .custom-checkbox:checked::after {
+    content: '\2714';
+    color: rgb(93, 91, 91);
+    font-size: 16px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+ 
+
+  /* Botón de pago */
+  #payButton {
+    width: 100%;
+    padding: 0.8rem;
+    background: #ff5900;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 1.5rem;
+    transition: background 0.3s ease;
+    transition: 0.2s;
+  }
+  
+  #payButton:hover {
+    background: #ff5900;
+    box-shadow: 0px 0px 40px rgba(255, 81, 0, 0.438);
+    color:  #ffffff;
+  }
+  
+  /* Responsividad */
+  @media (max-width: 600px) {
+    #modalContent {
+      width: 90%;
+    }
+  }
+  
+  
+
+
+
+
+
 /* SECCIÓN CONTACTO */
 .contact {
     padding: 60px 20px;
@@ -480,7 +614,6 @@ img {
 .textarea {
     font-family: Arial, Helvetica, sans-serif;
     width: 70%;
-    padding: 8px;
     border: 1px solid transparent;
     border-bottom: 1px solid #ff5900;
     outline: none;
@@ -502,8 +635,10 @@ img {
 }
 
 
+
+
 /* btn wssp */ 
-.Btn {
+.Btn-wssp {
     width: 230px;
     height: 100px;
     display: flex;
@@ -519,9 +654,9 @@ img {
     z-index: 2;
     margin-top: 10%;
     margin-bottom: 10%;
-  }
-  
-  .svgContainer {
+}
+
+.svgContainer {
     width: 100%;
     height: 100%;
     display: flex;
@@ -533,9 +668,9 @@ img {
     border-radius: 10px;
     transition: all 0.3s;
     border: 1px solid rgba(156, 156, 156, 0.466);
-  }
-  
-  .BG {
+}
+
+.BG {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -544,18 +679,34 @@ img {
     border-radius: 10px;
     pointer-events: none;
     transition: all 0.3s;
-  }
-  
-  .Btn:hover .BG {
-    transform: rotate(35deg);
-    transform-origin: bottom;
-  }
-  
-  .Btn:hover .svgContainer {
-    background-color: rgba(156, 156, 156, 0.466);
-    backdrop-filter: blur(4px);
-  }
-  
+}
+
+/* Efecto hover para computadoras */
+@media (hover: hover) {
+    .Btn-wssp:hover .BG {
+        transform: rotate(35deg);
+        transform-origin: bottom;
+    }
+
+    .Btn-wssp:hover .svgContainer {
+        background-color: rgba(156, 156, 156, 0.466);
+        backdrop-filter: blur(4px);
+    }
+}
+
+/* Efecto click para dispositivos móviles */
+@media (hover: none) {
+    .Btn-wssp:active .BG {
+        transform: rotate(35deg);
+        transform-origin: bottom;
+    }
+
+    .Btn-wssp:active .svgContainer {
+        background-color: rgba(156, 156, 156, 0.466);
+        backdrop-filter: blur(4px);
+    }
+} 
+
 
 
 /* Animaciones */
