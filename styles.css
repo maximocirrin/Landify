@@ -650,6 +650,14 @@ backdrop-filter: blur(3px);
     animation: fadeInDown 1s ease-in-out;
 }
 
+.contacto-flex-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 1.5rem;
+    justify-content: center;
+    align-self: stretch;
+}
 
 
 
@@ -1039,29 +1047,24 @@ backdrop-filter: blur(3px);
   fill: white;
 }
 
-.parent-sc:hover .card-sc {
+.parent-sc.hover-active-sc .card-sc {
   transform: rotate3d(1, 1, 0, 30deg);
   box-shadow: rgba(71, 19, 5, 0.3) 30px 50px 25px -40px, rgba(5, 71, 17, 0.1) 0px 25px 30px 0px;
 }
-
-.parent-sc:hover .card-sc .bottom-sc .social-buttons-container .social-button {
+.parent-sc.hover-active-sc .card-sc .bottom-sc .social-buttons-container .social-button {
   transform: translate3d(0, 0, 50px);
   box-shadow: rgba(71, 28, 5, 0.2) -5px 20px 10px 0px;
 }
-
-.parent-sc:hover .card-sc .logo-sc .circle-sc2 {
+.parent-sc.hover-active-sc .card-sc .logo-sc .circle-sc2 {
   transform: translate3d(0, 0, 60px);
 }
-
-.parent-sc:hover .card-sc .logo-sc .circle-sc3 {
+.parent-sc.hover-active-sc .card-sc .logo-sc .circle-sc3 {
   transform: translate3d(0, 0, 80px);
 }
-
-.parent-sc:hover .card-sc .logo-sc .circle-sc4 {
+.parent-sc.hover-active-sc .card-sc .logo-sc .circle-sc4 {
   transform: translate3d(0, 0, 100px);
 }
-
-.parent-sc:hover .card-sc .logo-sc .circle-sc5 {
+.parent-sc.hover-active-sc .card-sc .logo-sc .circle-sc5 {
   transform: translate3d(0, 0, 120px);
 }
 

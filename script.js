@@ -154,3 +154,27 @@ document.addEventListener('DOMContentLoaded', () => {
       observer.observe(element);
     });
   });
+
+
+
+
+  // efecto in-view social card
+
+  document.addEventListener('DOMContentLoaded', () => {
+  const container = document.querySelector('.parent-sc');
+  if (!container) return;
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        container.classList.add('hover-active-sc');
+      } else {
+        container.classList.remove('hover-active-sc');
+      }
+    });
+  }, {
+    threshold: 0.5 // entra al menos 50% en viewport
+  });
+
+  observer.observe(container);
+});
