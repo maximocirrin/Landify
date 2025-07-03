@@ -13,8 +13,8 @@ body {
 .dots {
     width: 100%;
     height: 100%;
-    background-image: radial-gradient(rgba(255, 81, 0, 0.452) 4px, transparent 0);
-    background-size: 30px 30px;
+    background-image: radial-gradient(rgba(255, 81, 0, 0.19) 4px, transparent 0);
+    background-size: 80px 80px;
     background-position: -5px -5px;
     background-attachment: fixed;
   }
@@ -33,7 +33,7 @@ header {
     width: 99%;
    
     margin: 0 auto;
-    height: 15%;
+    height: 5;
     border-radius: 10px;
     background: rgba(255, 255, 255, 0.2);
 -webkit-backdrop-filter: blur(5px);
@@ -586,32 +586,7 @@ backdrop-filter: blur(8px);
 }
 
 
-/* .custom-checkbox {
-    appearance: none;
-    width: 20px;
-    height: 20px;
-    border: 2px solid #ff5900;
-    border-radius: 5px;
-    background: transparent;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    position: relative;
-  }
-  
-  .custom-checkbox:checked {
-    background: #ff5900;
-    box-shadow: 0px 0px 40px rgba(255, 81, 0, 0.438);
-  }
-  
-  .custom-checkbox:checked::after {
-    content: '\2714';
-    color: rgb(93, 91, 91);
-    font-size: 16px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
+
   */
 
   /* Botón de pago */
@@ -851,6 +826,244 @@ backdrop-filter: blur(3px);
         backdrop-filter: blur(4px);
     }
 } 
+
+
+
+/* Social card */
+.parent-sc {
+  width: 320px;
+  height: 320px;
+  perspective: 1000px;
+}
+
+.card-sc {
+  height: 100%;
+  border-radius: 50px;
+  background: linear-gradient(135deg, #ff5900 0%, #f09628 100%);
+  transition: all 0.5s ease-in-out;
+  transform-style: preserve-3d;
+  box-shadow: rgba(5, 71, 17, 0) 40px 50px 25px -40px, rgba(5, 71, 17, 0.2) 0px 25px 25px -5px;
+}
+
+.glass-sc {
+  transform-style: preserve-3d;
+  position: absolute;
+  inset: 8px;
+  border-radius: 55px;
+  border-top-right-radius: 100%;
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.349) 0%, rgba(255, 255, 255, 0.815) 100%);
+  /* -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px); */
+  transform: translate3d(0px, 0px, 25px);
+  border-left: 1px solid white;
+  border-bottom: 1px solid white;
+  transition: all 0.5s ease-in-out;
+}
+
+.content-sc {
+  padding: 100px 60px 0px 30px;
+  transform: translate3d(0, 0, 26px);
+}
+
+.content-sc .title-sc {
+  display: block;
+  color: #ff5900;
+  font-weight: 900;
+  font-size: 20px;
+}
+
+.content-sc .text-sc {
+  display: block;
+  color: rgba(255, 89, 0, 0.76);
+  font-size: 15px;
+  margin-top: 20px;
+}
+
+.bottom-sc {
+  padding: 10px 12px;
+  transform-style: preserve-3d;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transform: translate3d(0, 0, 26px);
+}
+
+.bottom-sc .view-more {
+  display: flex;
+  align-items: center;
+  width: 40%;
+  justify-content: flex-end;
+  transition: all 0.2s ease-in-out;
+}
+
+.bottom-sc .view-more:hover {
+  transform: translate3d(0, 0, 10px);
+}
+
+.bottom-sc .view-more .view-more-button {
+  background: none;
+  border: none;
+  color: #ff5900;
+  font-weight: bolder;
+  font-size: 12px;
+}
+
+.bottom-sc .view-more .svg-sc {
+  fill: none;
+  stroke: #ff5900;
+  stroke-width: 3px;
+  max-height: 15px;
+}
+
+.bottom-sc .social-buttons-container {
+  display: flex;
+  gap: 10px;
+  transform-style: preserve-3d;
+}
+
+.bottom-sc .social-buttons-container .social-button {
+  width: 30px;
+  aspect-ratio: 1;
+  padding: 5px;
+  background: rgb(255, 255, 255);
+  border-radius: 50%;
+  border: none;
+  display: grid;
+  place-content: center;
+  box-shadow: rgba(255, 47, 0, 0.502) 0px 7px 5px -5px;
+}
+
+.bottom-sc .social-buttons-container .social-button:first-child {
+  transition: transform 0.2s ease-in-out 0.4s, box-shadow 0.2s ease-in-out 0.4s;
+}
+
+.bottom-sc .social-buttons-container .social-button:nth-child(2) {
+  transition: transform 0.2s ease-in-out 0.6s, box-shadow 0.2s ease-in-out 0.6s;
+}
+
+.bottom-sc .social-buttons-container .social-button:nth-child(3) {
+  transition: transform 0.2s ease-in-out 0.8s, box-shadow 0.2s ease-in-out 0.8s;
+}
+
+.bottom-sc .social-buttons-container .social-button .svg-sc {
+  width: 15px;
+  fill: #ff5900;
+}
+
+.bottom-sc .social-buttons-container .social-button:hover {
+  background: black;
+}
+
+.bottom-sc .social-buttons-container .social-button:hover .svg-sc {
+  fill: white;
+}
+
+.bottom-sc .social-buttons-container .social-button:active {
+  background: rgb(255, 234, 0);
+}
+
+.bottom-sc .social-buttons-container .social-button:active .svg-sc {
+  fill: black;
+}
+
+.logo-sc {
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform-style: preserve-3d;
+}
+
+.logo-sc .circle-sc {
+  display: block;
+  position: absolute;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  top: 0;
+  right: 0;
+  box-shadow: rgba(100, 100, 111, 0.2) -10px 10px 20px 0px;
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  background: rgba(255, 89, 0, 0.2);
+  transition: all 0.5s ease-in-out;
+}
+
+.logo-sc .circle-sc1 {
+  width: 170px;
+  transform: translate3d(0, 0, 20px);
+  top: 8px;
+  right: 8px;
+}
+
+.logo-sc .circle-sc2 {
+  width: 140px;
+  transform: translate3d(0, 0, 40px);
+  top: 10px;
+  right: 10px;
+  -webkit-backdrop-filter: blur(1px);
+  backdrop-filter: blur(1px);
+  transition-delay: 0.4s;
+}
+
+.logo-sc .circle-sc3 {
+  width: 110px;
+  transform: translate3d(0, 0, 60px);
+  top: 17px;
+  right: 17px;
+  transition-delay: 0.8s;
+}
+
+.logo-sc .circle-sc4 {
+  width: 80px;
+  transform: translate3d(0, 0, 80px);
+  top: 23px;
+  right: 23px;
+  transition-delay: 1.2s;
+}
+
+.logo-sc .circle-sc5 {
+  width: 50px;
+  transform: translate3d(0, 0, 100px);
+  top: 30px;
+  right: 30px;
+  display: grid;
+  place-content: center;
+  transition-delay: 1.6s;
+}
+
+.logo-sc .circle-sc5 .svg-sc {
+  width: 20px;
+  fill: white;
+}
+
+.parent-sc:hover .card-sc {
+  transform: rotate3d(1, 1, 0, 30deg);
+  box-shadow: rgba(71, 19, 5, 0.3) 30px 50px 25px -40px, rgba(5, 71, 17, 0.1) 0px 25px 30px 0px;
+}
+
+.parent-sc:hover .card-sc .bottom-sc .social-buttons-container .social-button {
+  transform: translate3d(0, 0, 50px);
+  box-shadow: rgba(71, 28, 5, 0.2) -5px 20px 10px 0px;
+}
+
+.parent-sc:hover .card-sc .logo-sc .circle-sc2 {
+  transform: translate3d(0, 0, 60px);
+}
+
+.parent-sc:hover .card-sc .logo-sc .circle-sc3 {
+  transform: translate3d(0, 0, 80px);
+}
+
+.parent-sc:hover .card-sc .logo-sc .circle-sc4 {
+  transform: translate3d(0, 0, 100px);
+}
+
+.parent-sc:hover .card-sc .logo-sc .circle-sc5 {
+  transform: translate3d(0, 0, 120px);
+}
 
 
 
