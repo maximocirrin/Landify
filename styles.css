@@ -901,25 +901,13 @@ backdrop-filter: blur(3px);
   transform: translate3d(0, 0, 26px);
 }
 
-.bottom-sc .view-more {
-  display: flex;
-  align-items: center;
-  width: 40%;
-  justify-content: flex-end;
-  transition: all 0.2s ease-in-out;
-}
+
 
 .bottom-sc .view-more:hover {
   transform: translate3d(0, 0, 10px);
 }
 
-.bottom-sc .view-more .view-more-button {
-  background: none;
-  border: none;
-  color: #ff5900;
-  font-weight: bolder;
-  font-size: 12px;
-}
+
 
 .bottom-sc .view-more .svg-sc {
   fill: none;
@@ -964,7 +952,7 @@ backdrop-filter: blur(3px);
 }
 
 .bottom-sc .social-buttons-container .social-button:hover {
-  background: black;
+  background: #413c3a;
 }
 
 .bottom-sc .social-buttons-container .social-button:hover .svg-sc {
@@ -976,7 +964,7 @@ backdrop-filter: blur(3px);
 }
 
 .bottom-sc .social-buttons-container .social-button:active .svg-sc {
-  fill: black;
+  fill: rgb(62, 59, 59);
 }
 
 .logo-sc {
@@ -1034,7 +1022,7 @@ backdrop-filter: blur(3px);
 }
 
 .logo-sc .circle-sc5 {
-  width: 50px;
+  width: 70px;
   transform: translate3d(0, 0, 100px);
   top: 30px;
   right: 30px;
@@ -1043,8 +1031,8 @@ backdrop-filter: blur(3px);
   transition-delay: 1.6s;
 }
 
-.logo-sc .circle-sc5 .svg-sc {
-  width: 20px;
+.logo-sc .circle-sc5  {
+  width: 50px;
   fill: white;
 }
 
@@ -1067,6 +1055,10 @@ backdrop-filter: blur(3px);
 }
 .parent-sc.hover-active-sc .card-sc .logo-sc .circle-sc5 {
   transform: translate3d(0, 0, 120px);
+}
+
+.logo-svg-sc {
+width: 100px !important; 
 }
 
 
