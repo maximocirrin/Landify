@@ -667,7 +667,8 @@ backdrop-filter: blur(3px);
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    background-image: linear-gradient(45deg, #330808, #3a2c09);
+    border: #ff5100;
+    border-style: solid;
     border-radius: 2.5em;
     width: 320px;
     height: 320px;
@@ -677,7 +678,6 @@ backdrop-filter: blur(3px);
 
 .form::before {
     content: '';
-    background-image: linear-gradient(45deg, #ff0000, #ffb700);
     width: 102%;
     height: 102%;
     position: absolute;
