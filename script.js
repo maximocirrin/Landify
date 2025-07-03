@@ -88,12 +88,13 @@ const modalContainer = document.createElement('div');
 modalContainer.id = 'modalContainer';
 modalContainer.innerHTML = `
   <div id="modalContent">
-    <span id="closeModal">&times;</span>
+    <span id="closeModal">X</span>
     <h2>Confirmar Compra</h2>
     <p id="planName">Plan Seleccionado</p>
     <p id="planPrice">Precio: $</p>
-    <label>
-      <input type="checkbox" id="extraOption" class="custom-checkbox"> Cambios Mensuales (+$10)
+    <label class="container-checkbox">
+      <input type="checkbox" id="extraOption" class="custom-checkbox"> 
+      <div class="checkmark"></div>Cambios Mensuales (+$10)
     </label>
     <p id="totalPrice">Total: $</p>
     <button id="payButton">Pagar</button>
@@ -138,3 +139,18 @@ document.getElementById('extraOption').addEventListener('change', (e) => {
 
 
 
+document.addEventListener('DOMContentLoaded', () => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        } else {
+          entry.target.classList.remove('visible');
+        }
+      });
+    }, { threshold: 0.5 }); // Se activa cuando al menos el 50% del elemento es visible
+  
+    document.querySelectorAll('.animate-on-scroll').forEach(element => {
+      observer.observe(element);
+    });
+  });
