@@ -44,28 +44,26 @@ document.querySelectorAll('.btn-hero').forEach(link => {
 });
 
 // Detectar la sección activa y aplicar la clase activa
-const sections = document.querySelectorAll('section');
-const navLinks = document.querySelectorAll('header nav ul li a');
+const sections   = document.querySelectorAll('section');
+const navLinks   = document.querySelectorAll('header nav ul li a');
+const headerHeight = document.querySelector('header').offsetHeight;
 
 window.addEventListener('scroll', () => {
-    let currentSection = '';
+  let currentSection = '';
 
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop - 50;
-        const sectionHeight = section.clientHeight;
+  sections.forEach(section => {
+    const rect = section.getBoundingClientRect();
+    // cuando el top de la sección llega justo debajo del header
+    if (rect.top <= headerHeight && rect.bottom > headerHeight) {
+      currentSection = section.id;
+    }
+  });
 
-        if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
-            currentSection = section.getAttribute('id');
-        }
-    });
-
-    navLinks.forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href') === `#${currentSection}`) {
-            link.classList.add('active');
-        }
-    });
+  navLinks.forEach(link => {
+    link.classList.toggle('active', link.getAttribute('href') === `#${currentSection}`);
+  });
 });
+
 
 
 // btn effect
@@ -148,7 +146,7 @@ document.addEventListener('DOMContentLoaded', () => {
           entry.target.classList.remove('visible');
         }
       });
-    }, { threshold: 0.5 }); // Se activa cuando al menos el 50% del elemento es visible
+    }, { threshold: 0.4 }); // Se activa cuando al menos el 50% del elemento es visible
   
     document.querySelectorAll('.animate-on-scroll').forEach(element => {
       observer.observe(element);
