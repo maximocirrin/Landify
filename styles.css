@@ -5,6 +5,9 @@ body {
     padding: 0;
     background: #eef0ed;
     color: #eef0ed;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
     
     scroll-behavior: smooth; /* Habilita el scroll suave */
 }
@@ -30,10 +33,12 @@ header {
     position: sticky; /* Fija la barra de navegación */
     top: 0.5vh;
     z-index: 1000;
-    width: 99%;
-   
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;   
     margin: 0 auto;
-    height: 5;
+    height: 8vh;
     border-radius: 10px;
     background: rgba(255, 255, 255, 0.2);
 -webkit-backdrop-filter: blur(5px);
@@ -358,6 +363,7 @@ backdrop-filter: blur(8px);
   padding: 0.7em 1.7em;
   cursor: pointer;
   font-size: 18px;
+  
   border-radius: 0.5em;
   background: #e8e8e8;
   border: 1px solid #e8e8e8;
@@ -642,7 +648,7 @@ backdrop-filter: blur(3px);
     flex-wrap: wrap;
     flex-direction: row;
     gap: 1rem;
-    justify-content: space-evenly;
+    justify-content: center;
     align-self: stretch;
 }
 
@@ -657,10 +663,10 @@ backdrop-filter: blur(3px);
     border: #ff5100;
     border-style: solid;
     border-radius: 2.5em;
-    width: 320px;
-    height: 320px;
-    max-width: 320px;
+    width: 90%;
+    max-width: 300px;
     aspect-ratio: 1 / 1;
+    
 }
 
 .form::before {
@@ -687,8 +693,7 @@ backdrop-filter: blur(3px);
     overflow: hidden;
     transition: all 0.2s;
     cursor: pointer;
-    width: fit-content;
-    max-width: 90%;
+    width: 40px;
 }
 
 .button:hover {
@@ -706,7 +711,6 @@ backdrop-filter: blur(3px);
 .input {
     width: 70%;
     padding: 8px;
-    margin-bottom: 20px;
     border: 1px solid transparent;
     border-bottom: 1px solid #ff5900;
     outline: none;
@@ -720,7 +724,7 @@ backdrop-filter: blur(3px);
     border: 1px solid transparent;
     border-bottom: 1px solid #ff5900;
     background-color: transparent;
-    color: white;
+    color: rgb(45, 45, 45);
 }
 
 .input::placeholder {
@@ -730,13 +734,14 @@ backdrop-filter: blur(3px);
 .textarea {
     font-family: Arial, Helvetica, sans-serif;
     width: 70%;
+    margin-top: 20px;
     border: 1px solid transparent;
     border-bottom: 1px solid #ff5900;
     outline: none;
     background-color: transparent;
     color: #ff5900;
     resize: none;
-    cursor: pointer;
+    height: 10%;
 }
 
 .textarea::placeholder {
@@ -747,7 +752,7 @@ backdrop-filter: blur(3px);
     border: 1px solid transparent;
     border-bottom: 1px solid #ff5900;
     background-color: transparent;
-    color: white;
+    color: rgb(45, 45, 45);
 }
 
 
@@ -755,15 +760,15 @@ backdrop-filter: blur(3px);
 
 /* btn wssp */ 
 .Btn-wssp {
-    width: 230px;
-    height: 100px;
+    width: 220px;
+    height: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
     border: none;
     background-color: transparent;
     position: relative;
-    border-radius: 7px;
+    border-radius: 5em;
     cursor: pointer;
     transition: all 0.3s;
     padding: 0%;
@@ -781,7 +786,7 @@ backdrop-filter: blur(3px);
     background-color: transparent;
     backdrop-filter: blur(0px);
     letter-spacing: 0.8px;
-    border-radius: 10px;
+    border-radius: 5em;
     transition: all 0.3s;
     border: 1px solid rgba(156, 156, 156, 0.466);
 }
@@ -792,7 +797,7 @@ backdrop-filter: blur(3px);
     height: 100%;
     background: rgb(37 199 97);
     z-index: -1;
-    border-radius: 10px;
+    border-radius: 5em;
     pointer-events: none;
     transition: all 0.3s;
 }
@@ -828,7 +833,8 @@ backdrop-filter: blur(3px);
 /* Social card */
 .parent-sc {
   width: 320px;
-  height: 320px;
+  max-width: 320px;
+  aspect-ratio: 1 / 1;
   perspective: 1000px;
 }
 
@@ -857,7 +863,7 @@ backdrop-filter: blur(3px);
 }
 
 .content-sc {
-  padding: 100px 60px 0px 30px;
+  padding: 30% 60px 0px 30px;
   transform: translate3d(0, 0, 26px);
 }
 
@@ -872,8 +878,29 @@ backdrop-filter: blur(3px);
   display: block;
   color: rgba(255, 89, 0, 0.76);
   font-size: 15px;
-  margin-top: 20px;
+  margin-top: 5%;
 }
+
+@media (max-width: 362px) {
+  .content-sc .title-sc {
+    font-size: 18px;  /* o el valor que prefieras */
+  }
+
+  .content-sc .text-sc {
+    font-size: 12px;  /* o el valor que prefieras */
+  }
+
+  .content-sc {
+  padding: 20% 60px 0px 20px;
+  transform: translate3d(0, 0, 26px);
+}
+.parent-sc {
+  width: 280px;
+  aspect-ratio: 1 / 1;
+  perspective: 1000px;
+}
+}
+
 
 .bottom-sc {
   padding: 10px 12px;
@@ -1009,7 +1036,7 @@ backdrop-filter: blur(3px);
 }
 
 .logo-sc .circle-sc5 {
-  width: 70px;
+  width: 50px;
   transform: translate3d(0, 0, 100px);
   top: 30px;
   right: 30px;
@@ -1019,8 +1046,53 @@ backdrop-filter: blur(3px);
 }
 
 .logo-sc .circle-sc5  {
-  width: 50px;
+  
   fill: white;
+}
+
+@media (max-width: 362px) {
+.logo-sc .circle-sc1{
+  width: 130px;
+  transform: translate3d(0, 0, 20px);
+  top: 8px;
+  right: 8px;
+}
+
+.logo-sc .circle-sc2 {
+  width: 100px;
+  transform: translate3d(0, 0, 40px);
+  top: 10px;
+  right: 10px;
+  -webkit-backdrop-filter: blur(1px);
+  backdrop-filter: blur(1px);
+  transition-delay: 0.4s;
+}
+.logo-sc .circle-sc3 {
+  width: 80px;
+  transform: translate3d(0, 0, 60px);
+  top: 17px;
+  right: 17px;
+  transition-delay: 0.8s;
+}
+
+.logo-sc .circle-sc4 {
+  width: 60px;
+  transform: translate3d(0, 0, 80px);
+  top: 23px;
+  right: 23px;
+  transition-delay: 1.2s;
+}
+
+.logo-sc .circle-sc5 {
+  width: 40px;
+  transform: translate3d(0, 0, 100px);
+  top: 30px;
+  right: 30px;
+  display: grid;
+  place-content: center;
+  transition-delay: 1.6s;
+}
+
 }
 
 .parent-sc.hover-active-sc .card-sc {
