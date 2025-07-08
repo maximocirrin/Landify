@@ -67,12 +67,12 @@ window.addEventListener('scroll', () => {
 
 
 // btn effect
-document.querySelectorAll('.btn-pricing').forEach(function(button) {
+document.querySelectorAll('.btn-products').forEach(function(button) {
     button.addEventListener('click', function() {
-        this.classList.add('btn-pricing-active');
+        this.classList.add('btn-products-active');
 
         setTimeout(() => {
-            this.classList.remove('btn-pricing-active');
+            this.classList.remove('btn-products-active');
         }, 1000);
     });
 });
@@ -113,7 +113,7 @@ function closeModal() {
   modalContainer.style.display = 'none';
 }
 
-const actionButtons = document.querySelectorAll('.btn-pricing');
+const actionButtons = document.querySelectorAll('.btn-products');
 
 actionButtons.forEach((button) => {
   button.addEventListener('click', (e) => {
