@@ -270,7 +270,7 @@ img {
     .at-word {
       display: inline-block;
       opacity: 0;
-      color: #413c3a;
+      color: #615e5c;
       filter: blur(4px);
       /* la animación la dispara la clase .at-in-view en el padre */
       animation: at-fade-in 0.8s forwards
