@@ -199,3 +199,28 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const heading = document.getElementById("atHeading");
     observer.observe(heading);
+
+
+
+
+
+
+
+
+    document.addEventListener('DOMContentLoaded', () => {
+    const items = document.querySelectorAll('.feature-item');
+    if (!items.length) return;
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        entry.target.classList.toggle(
+          'feature-item-active',
+          entry.isIntersecting
+        );
+      });
+    }, {
+      threshold: 0.5
+    });
+
+    items.forEach(item => observer.observe(item));
+  });
