@@ -176,3 +176,26 @@ document.addEventListener('DOMContentLoaded', () => {
 
   observer.observe(container);
 });
+
+
+
+
+
+ // 1. Animacion texto fade in
+    const words = document.querySelectorAll(".at-word");
+    words.forEach((w, i) => {
+      w.style.setProperty("--at-delay", `${i * 0.1 + 0.2}s`);
+    });
+
+    // 2. Intersection Observer para disparar la animación cuando entra en viewport
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("at-in-view");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.5 });
+
+    const heading = document.getElementById("atHeading");
+    observer.observe(heading);
