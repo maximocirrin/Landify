@@ -224,3 +224,35 @@ document.addEventListener('DOMContentLoaded', () => {
 
     items.forEach(item => observer.observe(item));
   });
+
+
+
+
+  // 1) Función para envolver cada palabra en un <span class="at-word">
+  function wrapWords(heading) {
+    const words = heading.textContent.trim().split(/\s+/);
+    heading.textContent = '';        // limpiamos
+    words.forEach((w, i) => {
+      const span = document.createElement('span');
+      span.className = 'at-word';
+      span.textContent = w + ' ';
+      span.style.setProperty('--at-delay', `${i * 0.1 + 0.2}s`);
+      heading.appendChild(span);
+    });
+  }
+
+  // 2) Preparamos el Intersection Observer
+  const observerTitle = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('at-in-view');
+        observerTitle.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.5 });
+
+  // 3) Aplicamos a TODOS los at-heading de la página
+  document.querySelectorAll('.at-heading').forEach(heading => {
+    wrapWords(heading);         // envolvemos palabras
+    observerTitle.observe(heading);  // y lo observamos
+  });
