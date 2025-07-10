@@ -212,6 +212,7 @@ img {
     .at-word {
       display: inline-block;
       opacity: 0;
+      margin-right: 8px;
       font-size: 1em;
       color: #615e5c;
       filter: blur(4px);
