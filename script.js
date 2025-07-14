@@ -146,7 +146,7 @@ document.addEventListener('DOMContentLoaded', () => {
           entry.target.classList.remove('visible');
         }
       });
-    }, { threshold: 0.4 }); // Se activa cuando al menos el 50% del elemento es visible
+    }, { threshold: 0.2 }); // Se activa cuando al menos el 50% del elemento es visible
   
     document.querySelectorAll('.animate-on-scroll').forEach(element => {
       observer.observe(element);

@@ -80,10 +80,10 @@ header nav ul li a::after {
     height: 1px;
     background: #ff5100;
     transition: width 0.3s ease, left 0.3s ease;
-}
 
-header nav ul li a::after {
-    content: '';
+    color: #ff5100;
+
+     content: '';
     position: absolute;
     bottom: -0.5px;
     left: 0;
@@ -91,6 +91,8 @@ header nav ul li a::after {
     height: 1px;
     transition: width 0.3s ease, left 0.3s ease;
 }
+
+
 
 header nav ul li a.active::after {
     width: 100%;
@@ -180,7 +182,6 @@ img {
 /* animacion texto fade in */
 
 
-@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
 
 .at-reset  {
       padding: 0;
@@ -297,7 +298,7 @@ img {
 .about h2 {
     font-size: 2.5rem;
     margin-bottom: 20px;
-    color: #413c3a;
+    color: #413c3a !important;
 }
 
 .about .features {
@@ -342,6 +343,7 @@ margin-bottom: 30px;
 .about .feature-item h3 {
     font-size: 1.5rem;
     margin-top: 10px;
+    color: #413c3a;
 }
 
 
@@ -368,7 +370,7 @@ margin-bottom: 30px;
     display: flex;
     flex-direction: column;
     text-align: center;
-    padding: 50px 20px;
+    padding: 0px 0px;
 }
 
 .products h2 {
@@ -387,11 +389,12 @@ margin-bottom: 30px;
     flex-wrap: wrap;
 }
 
- .products .plan {
+  .plan {
     margin: 15px;
     padding: 20px;
     width: 300px;
-    text-align: center;
+    align-items: center;
+    
     
    overflow: hidden;
 }
@@ -410,6 +413,7 @@ margin-bottom: 30px;
     margin-bottom: 2rem;
     border: #ff5100;
     border-style: solid;
+    
   }
   
   .animate-on-scroll {
@@ -429,13 +433,52 @@ margin-bottom: 30px;
 
 .plan-text{
     list-style: none;
-    padding: 0%;
+    padding: 0;
     color: #050505;
+    display: flex;          /* activa flexbox */
+  flex-direction: column;    /* filas horizontales */
+  gap: 1rem;  
+  
+
+  /* lo nuevo: */
+  align-items: flex-start;   /* confirma que los <li> se peguen al inicio */
+  align-self: flex-start;    /* mueve el propio <ul> al inicio del contenedor flex padre */
+  text-align: left;          /* fuerza alineación de texto a la izquierda */
+  width: 100%; 
 }
+
+.plan-description{
+   align-items: flex-start;   /* confirma que los <li> se peguen al inicio */
+  align-self: flex-start;    /* mueve el propio <ul> al inicio del contenedor flex padre */
+  text-align: left;          /* fuerza alineación de texto a la izquierda */
+  width: 100%; 
+  display: flex;          /* activa flexbox */
+  flex-direction: column; 
+  font-size: 110%;
+}
+
+
+
 .plan-text li{
-    margin-bottom: 5%;
+    font-size: 90%;
     
+    position: relative;      /* contenedor para el ::before */
+  padding-left: 1.6em;     /* deja hueco para el tic + margen */
+  line-height: 1.4; 
 }
+
+
+
+.plan-text li::before {
+  content: "✓";            /* tu tic */
+  position: absolute;
+  left: 0;                 /* pegado al borde del li */
+  top: 0.2em;              /* ajusta para centrarlo según tu line-height */
+  font-size: 1.2em;        /* o el tamaño que prefieras */
+  color: #00b894;          /* o tu color “moderno” */
+  line-height: 1;  
+}
+
 
 .plan h3{
     font-size: 1.5rem;
@@ -718,7 +761,7 @@ margin-bottom: 30px;
 
 /* SECCIÓN CONTACTO */
 .contact {
-    padding: 60px 20px;
+    padding: 60px 0px;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -770,17 +813,10 @@ border-radius: 16px;
     
 }
 
-.form::before {
-    content: '';
-    width: 102%;
-    height: 102%;
-    position: absolute;
-    z-index: -1;
-    border-radius: 2.7em;
-}
+
 
 .button {
-    margin-top: 10px;
+    margin-top: 10%;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1rem;
     background: #ff5900;
@@ -811,6 +847,8 @@ border-radius: 16px;
 
 .input {
     width: 70%;
+    margin-top: 10%;
+    margin-bottom: 10%;
     padding: 8px;
     border: 1px solid transparent;
     border-bottom: 1px solid #ff5900;
@@ -933,8 +971,8 @@ border-radius: 16px;
 
 /* Social card */
 .parent-sc {
-  width: 320px;
-  max-width: 320px;
+  width: 300px;
+  max-width: 300px;
   aspect-ratio: 1 / 1;
   perspective: 1000px;
 }
