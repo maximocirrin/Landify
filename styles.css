@@ -198,7 +198,7 @@ img {
     }
 
     /* Heading animado */
-    .at-heading {
+    .atHeading {
       max-width: 40ch;
       text-align: center;
       transform: scale(var(--at-base-scale));
@@ -215,7 +215,8 @@ img {
       opacity: 0;
       margin-right: 8px;
       font-size: 1em;
-      color: #615e5c;
+      color: #413c3a;
+        font-weight: 100;
       filter: blur(4px);
       /* la animación la dispara la clase .at-in-view en el padre */
       animation: at-fade-in 0.8s forwards
@@ -298,7 +299,8 @@ img {
 .about h2 {
     font-size: 2.5rem;
     margin-bottom: 20px;
-    color: #413c3a !important;
+    color: #413c3a;
+        font-weight: 100;
 }
 
 .about .features {
